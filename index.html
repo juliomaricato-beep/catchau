@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner de Estudos Centralizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Barra Lateral: Planejamento Semanal -->
+        <aside class="sidebar">
+            <h2>📅 Minha Semana</h2>
+            <ul class="days-list">
+                <li class="day-item active" data-day="segunda">Segunda-feira</li>
+                <li class="day-item" data-day="terca">Terça-feira</li>
+                <li class="day-item" data-day="quarta">Quarta-feira</li>
+                <li class="day-item" data-day="quinta">Quinta-feira</li>
+                <li class="day-item" data-day="sexta">Sexta-feira</li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal: Foco e Explicações -->
+        <main class="main-content">
+            <header>
+                <h1>Foco do Dia: <span id="current-day-title">Segunda-feira</span></h1>
+                <p class="subtitle">Tudo o que você precisa em um só lugar, sem trocar de aba.</p>
+            </header>
+
+            <section class="study-zone">
+                <div class="card">
+                    <h3>📚 Material de Estudo Sugerido</h3>
+                    <p id="study-suggestion">Selecione um dia para ver as sugestões de conteúdo e explicações.</p>
+                    <div id="explanation-box" class="explanation-box hidden">
+                        <h4>💡 Explicação Rápida:</h4>
+                        <p id="explanation-text"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Barra Lateral Direita: Metas do Dia -->
+        <aside class="tasks-sidebar">
+            <h2>🎯 Metas Diárias</h2>
+            <div class="progress-container">
+                <small>Progresso</small>
+                <div class="progress-bar"><div class="progress" id="progress-fill"></div></div>
+            </div>
+            <ul class="task-list" id="task-list">
+                <!-- Inserido dinamicamente via JS -->
+            </ul>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
